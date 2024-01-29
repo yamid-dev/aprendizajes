@@ -1,0 +1,483 @@
+@font-face {
+    font-family: "MiFuentePersonalizada"; /* El nombre que le asignas a la fuente */
+    src: url('\HTML & CSS\Página web- arquitectura orientada a servicios\IBMPlexSans-BoldItalic.otf') format('truetype'); /* Ruta relativa a la fuente descargada */
+  }
+
+html{
+    display: flex;
+    overflow: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado{
+    background-color:#5eb319;
+    height: 140px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.titulo_uno{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    color:white;
+    font-size: 34;
+    text-align: center;
+    position: relative;
+    top: -45px; /* Ajusta la posición del título hacia arriba */
+}
+
+.imagen_uno{
+    width:100px;
+    height:100px;
+    position: relative;
+    top: 15px;
+    left: 15px; /* Ajusta la posición del título hacia arriba */
+}
+.menuu{
+    background-image:url("vista-superior-concepto-dia-mundial-turismo-espacio-copia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    overflow:scroll;
+}
+
+.menu{
+    background-image:url("diseno-fondo-naranja-suave-abstracto-designstudioroom-plantilla-web-informe-comercial-c-suave.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    overflow:scroll;
+    background-image: linear-gradient(to bottom right,white,rgb(104, 214, 104));
+    
+}
+
+.titulo_dos{
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: -100px;
+    top: 150px;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 37;
+}
+.titulo_tres{
+    color: black;
+    position: relative;
+    left:33%;
+    margin-top: -120px;
+    top: 170px;
+    right: 50px;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 47;
+}
+.titulo_cuatro{
+    display: inline;
+    color: black;
+    position: relative;
+    margin-top: -200px;
+    margin-left: 990px;
+    display: inline;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 47;
+}
+.titulo_cinco{
+    display: inline;
+    color: black;
+    text-align: center;
+    position: relative;
+    margin-top: -100px;
+    left: 35%;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 47;
+}
+.titulo_seis{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 30px;
+    position: relative;
+    left: 0px;    
+
+}
+.titulo_siete{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 30px;
+    position: relative;
+    left: 0px;
+    bottom: 10px;
+}
+.titulo_ocho{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 30px;
+    position: relative;
+    top: -10%;
+    left: -66.5%;
+    color: black;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    display: inline;  
+}
+.titulo_nueve{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    position: relative;
+    left:70%;
+    bottom:65%;
+    font-size:30px;
+}
+.titulo_diez{
+    position: relative;
+    left: 70%;
+    bottom: 650px;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.titulo_x{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    position: relative;
+    left:600px;
+    font-size:37; 
+}
+.titulo_once{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    position: relative;
+    top: 15px;
+    left:0px;
+    font-size:37; 
+}
+.titulo_doce{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    position: relative;
+    top: 40px;
+    left:0px;
+    font-size:37; 
+}
+.aos{
+    position: relative;
+    top: 5px;
+    left: 40%;
+    height: 60px;
+    width: 500px;
+    font-size: 25;
+    color: white;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.acs{
+    position: relative;
+    margin-top: 30px;
+    left: 40%;
+    height: 60px;
+    width: 500px;
+    font-size: 25px;
+    color: white;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.mvc{
+    position: relative;
+    margin-top: 30px;
+    left:40%;
+    height: 60px;
+    width: 500px;
+    font-size: 25px;
+    color: white;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.bannerx{
+    position: relative;
+    margin-top: 30px;
+    left:40%;
+    height: 60px;
+    width: 500px;
+    font-size: 25px;
+    color: white;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.pie_pagina{
+    background-color:#5eb319;
+    height: 90px;
+    width: 2500px;
+}
+.texto_pie{
+    position: relative;
+    top: 15;
+    text-align: center;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.btn{
+    position: relative;
+    bottom: 218%;
+    right: 20%;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.btn1{
+    position: relative;
+    font-size: 20px;
+    top: -210px;
+    left:-73.5%;
+    width: 100px;
+    height: 40px;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.btn2{
+    position: relative;
+    font-size: 20px;
+    bottom:1980px;
+    left:115px;
+    width: 100px;
+    height: 40px;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.btn3{
+    position: relative;
+    font-size: 20px;
+    bottom: 1320px;
+    left:115px;
+    width: 100px;
+    height: 40px;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.btn4{
+    position: relative;
+    left:3200px;
+    bottom: 750px;
+    width: 100px;
+    height: 40px;
+    background-color:#5eb319;
+    border-color:#5eb319;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.parrafo_uno{
+    position: relative;
+    top:170px;
+    left: 100px;
+    color: black;
+    width: 500px;
+    font-size: 1rem;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.parrafo_dos{
+    position: relative;
+    left: 750px;
+    width: 500px;
+    top: -140px;
+    color: black;
+    font-size: 1rem;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.parrafo_dos_dos{
+    position: relative;
+    left: 1400px;
+    width: 500px;
+    top: -520px;
+    font-size: 1rem;
+    color: black;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.parrafo_tres{
+    color: black;
+    width: 250px;
+    display: inline;
+    font-size: 1rem;
+    width: -100px;
+    position: relative;
+    top:20% ;
+    left:5.5%;
+    justify-content:left;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.parrafo_cuatro{
+    color: black;
+    width: 100px;
+    position: relative;
+    display: inline;
+    top: 25%;
+    left:5%;
+    font-size: 0.8rem;
+    font-family: "MiFuentePersonalizada", sans-serif;
+}
+.parrafo_cinco{
+    display: inline;
+    font-size: 1.15rem;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    color :black;
+    position: relative;
+    left: 5%;
+    top:20%;
+    width: 700px;
+}
+.parrafo_seis{
+    position: relative;
+    left:70%;
+    bottom: 62%;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    width: 750px;
+    font-size:1.1rem;;
+}
+.parrafo_siete{
+    position: relative;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    top:-365px;
+    left: 110%;
+    font: 1.1rem;;
+}
+.parrafo_ocho {
+    font-family: "MiFuentePersonalizada", sans-serif;
+    column-count: 2;
+    column-gap: 100px; /* Espacio entre las columnas */
+    column-width: 400px; /* Ancho deseado para cada columna */
+    position: relative;
+    left: 5%;
+    top: 8%;
+    width: 900px; /* Ajustar el ancho total para acomodar el nuevo ancho de columna */
+    font-size: 1.22rem;
+  }
+.parrafo_nueve {
+    position: relative;
+    left:5%;
+    bottom: 5%;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    width: 750px;
+    font-size:1.15rem;;
+  }
+  
+.parrafo_diez{
+    font-family: "MiFuentePersonalizada", sans-serif;
+    column-count: 2;
+    column-gap: 100px; /* Espacio entre las columnas */
+    column-width: 150px; /* Ancho deseado para cada columna */
+    position: relative;
+    left: 85%;
+    bottom: 170%;
+    width: 1200px; /* Ajustar el ancho total para acomodar el nuevo ancho de columna */
+    font-size: 1.20rem;
+}
+  
+.video{
+    position: relative;
+    left: 2080px;
+    top: -950px;
+}
+.videox{
+    position: relative;
+    left: 372px;
+    bottom: 10%;
+}
+.imagenx{
+    width: 400px;
+    height: 200px;
+    margin-top: 200px;
+    margin-left: 250px;
+
+}
+.imagenxw{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    bottom: 550px;
+    margin-left: 1000px;
+
+}
+.imagenxy{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    bottom: 300px;
+    margin-left: 1100px;
+
+}
+.videom{
+    position: relative;
+    left: 100px;
+    bottom: 540px;
+}
+.body {
+    background-image:url("Sena-Logo-Fondo-Verde-300x300.jpg");
+    font-family: "MiFuentePersonalizada", sans-serif;
+    margin-left: 250px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .banner {
+    position: relative;
+    left: 120%;
+    border-radius: 10px;
+    bottom: 0%;
+    width: 500px;
+    height: 500px;
+    background-color: #238276; /* Color de fondo del banner */
+    color: #ffffff; /* Color del texto */
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .banner-title {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  
+  .banner-text {
+    font-size: 1.8rem;
+    margin-top: 25%;
+  }
+  
+  .btnx {
+    display: inline-block;
+    margin-top: 150px;
+    background-color:#fc7323; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    font-size: 15;
+  }
+  
+  .btn:hover {
+    background-color: #27ae60; /* Color de fondo del botón al pasar el cursor */
+  }
+.lista_uno{
+    position: relative;
+    left:70%;
+    bottom: 610px;
+    font-family: "MiFuentePersonalizada", sans-serif;
+    font-size: 20;
+    width: 1500px;
+    column-count: 3;
+    column-gap: 100px; /* Espacio entre las columnas */
+    column-width: 350px;
+}
+.tabla{
+    size: 100px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 3350px;
+    bottom: 2000px;
+}

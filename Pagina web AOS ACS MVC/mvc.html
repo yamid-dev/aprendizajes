@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Modelo Vista Controlador</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="encabezado">
+            <img class="imagen_uno" src="logo-de-Sena-sin-fondo-Blanco-300x300.png" alt="cargando...">
+            <h1 class="titulo_uno">ANÁLISIS Y DESARROLLO DE SOFTWARE</h1>
+        </div>
+        <div class="menu">
+            <br><br><br><h2 class="titulo_cinco">Modelo vista controlador</h2>
+            <br><br><br>
+            <p class="parrafo_nueve">
+                <strong><span class="titulo_once">CONCEPTO</span></strong><br><br>
+                El Modelo Vista-Controlador (MVC) es un patrón de diseño de software ampliamente utilizado en el desarrollo de aplicaciones, especialmente en el contexto de aplicaciones web y de escritorio. La idea principal detrás del patrón MVC es dividir una aplicación en tres componentes principales: el Modelo, la Vista y el Controlador, para lograr una separación clara de responsabilidades y mejorar la modularidad y mantenibilidad del código.
+
+                <br><br>Los componentes del patrón MVC son los siguientes:
+
+                <br><br>Modelo (Model): Representa la estructura de datos y lógica de negocio de la aplicación. Es responsable de acceder a la base de datos o a cualquier fuente de datos subyacente y de manejar la lógica de negocios para procesar y manipular los datos.
+
+                <br><br>Vista (View): Es la interfaz gráfica de la aplicación con la que el usuario interactúa. Presenta los datos al usuario y se encarga de mostrar la información de una manera legible y atractiva. La Vista no debe contener lógica de negocio; su función principal es mostrar los datos proporcionados por el Modelo.
+
+                <br><br>Controlador (Controller): Actúa como intermediario entre el Modelo y la Vista. Recibe las interacciones del usuario desde la Vista y las traduce en acciones y comandos que el Modelo debe realizar. También se encarga de actualizar la Vista con los datos relevantes después de que el Modelo haya sido modificado.
+            </p>
+            <br><br><br>
+           
+            <img class="imagenxw" src="1691189683267.png" alt="arquitectura cliente servidor">
+            <video controls width=500 height=400 class="videom" poster="Logo-del-sena-Verde-300x300-1.jpg">
+        
+                <source src="que-es-mvc-y-como-funciona-en-5-minutos.mp4" type="video/mp4">
+                
+                Tu navegador no admite el elemento de video.
+            </video>
+            <br><br><br><br><br><br>
+            <p class="parrafo_diez">
+                <strong><span class="titulo_doce">APLICACIONES</span></strong><br><br>
+                <br><br><br> Desarrollo web: MVC es especialmente útil en el desarrollo web, donde puede ayudar a organizar la lógica del servidor, la presentación de la interfaz de usuario y la gestión de datos. Los frameworks populares como Ruby on Rails, Django y Laravel se basan en el patrón MVC.
+
+                <br><br><br>Aplicaciones de escritorio: Las aplicaciones de escritorio también pueden beneficiarse del patrón MVC al separar la lógica de negocio (Modelo), la interfaz de usuario (Vista) y la gestión de eventos y acciones (Controlador).
+
+                <br><br><br>Aplicaciones móviles: En el contexto de aplicaciones móviles, el patrón MVC se puede utilizar para separar la lógica de la aplicación, la presentación de la interfaz de usuario y la interacción con el usuario.
+
+                <br><br><br>Juegos: Muchos motores de juegos utilizan una variante del patrón MVC para separar la lógica del juego (Modelo), la representación visual (Vista) y la entrada del jugador (Controlador).
+
+                <br><br><br><br><br><br><br><br>Sistemas de gestión de contenido (CMS): Los CMS como WordPress y Drupal utilizan el patrón MVC para gestionar la creación, edición y visualización de contenido.
+
+                <br><br><br>Aplicaciones financieras: En aplicaciones financieras, el patrón MVC puede utilizarse para separar los cálculos financieros y la lógica de negocio (Modelo), la representación de los datos y gráficos (Vista) y la interacción con los datos financieros (Controlador).
+
+                <br><br><br>Sistemas de reservas y ventas: Aplicaciones que manejan reservas de hoteles, vuelos, entradas de eventos, etc., pueden beneficiarse del patrón MVC al separar la gestión de datos, la presentación de opciones y la interacción con el usuario.
+
+                <br><br><br>Aplicaciones científicas: En aplicaciones científicas y de investigación, el patrón MVC puede utilizarse para separar la lógica de cálculo, la visualización de datos y la interacción del usuario.
+
+                <br><br><br>Aplicaciones educativas: Las aplicaciones educativas que presentan contenido de manera interactiva pueden utilizar MVC para separar la presentación de contenido, la lógica de evaluación y la retroalimentación al usuario.
+
+                <br><br><br>Herramientas de diseño gráfico: En aplicaciones de diseño gráfico, el patrón MVC puede ayudar a separar la manipulación de gráficos y la interacción del usuario.   
+            </p>
+            <br><br><br><br>
+            <a href="index.html"><button class="btn2">Volver</button></a>
+            <table class="tabla" border="1">
+                <tr>
+                    <th>Caracteristicas</th>
+                    <th>Arq.Orientada a Servicios</th>
+                    <th>Arq. Cliente-Servidor</th>
+                    <th>Modelo Vista-Controlador</th>
+                </tr>
+                <tr>
+                    <td>Separación de roles</td>
+                    <td>Servicios independientes</td>
+                    <td>Cliente y Servidor</td>
+                    <td>Modelo, Vista, Controlador</td>
+
+                </tr>
+                <tr>
+                    <td>Comunicación</td>
+                    <td>Protocolos estándar(HTTP,SOAP,REST)</td>
+                    <td>Solicitudes y respuestas (HTTP)</td>
+                    <td>Llamadas internas</td>
+
+                </tr>
+                <tr>
+                    <td>Acomplamiento</td>
+                    <td>Bajo</td>
+                    <td>Moderado</td>
+                    <td>Bajo</td>
+
+                </tr>
+                <tr>
+                    <td>Escalabilidad</td>
+                    <td>Alta</td>
+                    <td>Moderada</td>
+                    <td>Moderada</td>
+
+                </tr>
+                <tr>
+                    <td>Reutilización</td>
+                    <td>Alta</td>
+                    <td>Moderada</td>
+                    <td>Alta</td>
+
+                </tr>
+                <tr>
+                    <td>Mantenimiento</td>
+                    <td>Cambios limitados</td>
+                    <td>Mantenimiento complejo</td>
+                    <td>Mantenimiento facilitado</td>
+
+                </tr>
+                <tr>
+                    <td>Ejemplos de tecnologías</td>
+                    <td>Servicios web, microservicios</td>
+                    <td>Aplicaciones web tradicionales</td>
+                    <td>Frameworks MVC</td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="pie_pagina">
+            <br>
+            <p class="texto_pie">Servicio Nacional de Aprendizaje-SENA- Pamplona N.d.S<br>Ficha: 2560966</p>
+        </div>
+    </body>
+</html>
