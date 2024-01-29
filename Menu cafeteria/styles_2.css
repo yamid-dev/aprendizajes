@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "OtraFuente"; /* El nombre que le asignas a la fuente */
+    src: url('Poppins-Regular.ttf') format('truetype'); /* Ruta relativa a la fuente descargada */
+}
+#body_2{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    color: white;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    display: flex;
+}
+section{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+section:nth-child(even){
+    background-color: white;
+}
+section:nth-child(odd){
+    background-color: black;
+    color: white;
+}
+section img{
+    width: 100%;
+}
+@media(width < 990px){
+    main{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    section{
+        width: 80%;
+    }
+}

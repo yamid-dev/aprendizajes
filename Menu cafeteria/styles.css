@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "OtraFuente"; /* El nombre que le asignas a la fuente */
+    src: url('Poppins-Regular.ttf') format('truetype'); /* Ruta relativa a la fuente descargada */
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    font-family: Arial;
+}
+html{
+    background-image: url("https://images.unsplash.com/photo-1573883844855-f364441ac463?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+}
+.dos{
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_960_720.jpg");
+}
+
+.principal{
+    margin-top:15px ;
+    background-color:bisque;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+.Titulo{
+    font-family:Impact;
+    font-size: 40;
+    color: black;
+}
+.Titulo_dos{
+    font-family:Impact;
+    font-size: 30;
+    color: black;
+}
+.Icono{
+    width: 60px;
+    height: 60px;
+}
+.linea{
+    width: auto;
+    color: red;
+    border-color: red;
+    border-width: 2px;
+}
+.linea_dos{
+    position: relative;
+    border-width: 2px;
+    width: auto;
+    color: red;
+    border-color: red;
+}
+.art_uno{
+    text-align: left;
+    position: relative;
+    left: 5%;
+    font-family: Arial;
+    font-size: 15;
+}
+.art_dos{
+    text-align: left;
+    position: relative;
+    left: 5%;
+    font-size: 15;
+    font-family: Arial;
+}
+.Cafe{
+    position: relative;
+    left: 0%;
+}
+.Postre{
+    position: relative;
+    left:0%;
+    margin-left: 0%;
+}
+.a{
+    column-count: 2;
+    column-gap: 250px;
+    padding:0px;
+    column-width: 120px;
+}
+.precios_caf{
+    position: relative;
+    left:50px;
+    bottom:6px;
+}
+.b{
+    column-count: 2;
+    column-gap: 285px;
+    padding: 0px ;
+}
+.Postre{
+    position: relative;
+    bottom: 85px;
+}
+.precios_pos{
+    position: relative;
+    left:30px;
+    bottom:0px;
+}
+.postres{
+    position: relative;
+    left: 0%;
+    text-align: left;
+}
+.cafes{
+    position: relative;
+    bottom:10px;
+}
+.pie{
+    position: relative;
+    bottom: 90px;
+    font-size: 16px;
+}
+.enlace{
+    color: black;
+}
+.enlace:hover{
+    color:orangered;
+}
+footer{
+    font-family: helvetica;
+}
+.Boton{
+    background-color: black;
+    border-color:black;
+    border-width: 0;
+    border-radius: 10px;
+    width: 150px;
+    color: white;
+    font-family: "OtraFuente",sans-serif;
+}
+.encabezado{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.seccion_uno{
+    background-color:black;
+    width: 20%;
+    height: 800px;
+    position: relative;
+    text-align: center;
+    color: white;
+    top:30px
+
+}
+.seccion_dos{
+    background-color:white;
+    width: 20%;
+    height: 800px;
+    position: relative;
+    left: 20%;
+    bottom:770px;
+    text-align: center;
+    color: black;
+}
+.seccion_tres{
+    background-color:black;
+    width: 20%;
+    height: 800px;
+    position: relative;
+    left:40%;
+    bottom: 1570px;
+    text-align: center;
+    color: white;
+}
+.seccion_cuatro{
+    background-color:white;
+    width: 20%;
+    height: 800px;
+    position: relative;
+    left:60%;
+    bottom:2370px;
+    text-align: center;
+    color: black;
+}
+.seccion_cinco{
+    background-color: black;
+    width: 20%;
+    height: 800px;
+    position: relative;
+    left:80%;
+    bottom:3170px;
+    text-align: center;
+    color: white;
+}
+.secc_uno{
+    font-family: Arial;
+    width: 250px;
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    font-size: 20;
+
+}
+.imagen_a{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.secc_dos{
+    font-family: Arial;
+    width: 250px;
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    font-size: 20;
+
+}
+.imagen_b{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    right: 50px;
+}
+.secc_tres{
+    font-family: Arial;
+    width: 250px;
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    font-size: 18;
+}
+.imagen_c{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top:-20px;
+}
+.secc_cuatro{
+    font-family: Arial;
+    width: 250px;
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    font-size: 18;
+}
+.imagen_d{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    top:-20px;
+}
+.secc_cinco{
+    font-family: Arial;
+    width: 250px;
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    font-size: 18;
+}
+.imagen_e{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    top:-20px;
+}

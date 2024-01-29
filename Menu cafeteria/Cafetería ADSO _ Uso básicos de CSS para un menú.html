@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5501/index.html# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería ADSO | Uso básicos de CSS para un menú</title>
+  <link href="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/index.css" rel="stylesheet" type="text/css">
+  <style>
+    /* Agregar estilos responsivos aquí */
+    @media (max-width: 768px) {
+      .dropdown {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      
+      .dropdown button {
+        width: 100%;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .menu-icon {
+        max-width: 30px;
+        height: auto;
+      }
+      
+      .carousel-container {
+        max-width: 100%;
+      }
+      
+      .carousel-slide img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="dropdown">
+      <button class="titulox">Cafetería ADSO</button>
+      <div class="dropdown-content">
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Inicio</button>
+      <div class="dropdown-content">
+        <a href="http://127.0.0.1:5501/index.html#">Desayuno</a>
+        <a href="http://127.0.0.1:5501/index.html#">Almuerzo</a>
+        <a href="http://127.0.0.1:5501/index.html#">Cena</a>
+        <a href="http://127.0.0.1:5501/index.html#">Café</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Quienes somos</button>
+      <div class="dropdown-content">
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Contacto</button>
+      <div class="dropdown-content">
+        <a href="http://127.0.0.1:5501/index.html#">Redes sociales</a>
+        <a href="http://127.0.0.1:5501/index.html#">Ubicación</a>
+        <a href="http://127.0.0.1:5501/registro.html">Registro</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <img src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/carrito-de-compras.png" alt="carrito" class="carrito">
+    </div>
+   
+  </nav>
+  
+  <div class="menu">
+    <header class="title-header">
+      <h1 class="tituloy">Cafetería ADSO</h1>
+      <p class="established">Ambiente 202</p>
+    </header>
+    <hr>
+    <main>
+      <section>
+        <header>
+          <h2>Café</h2>
+          <img class="menu-icon coffee-icon" src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/200139-200.png">
+        </header>
+        <center>
+          <div class="carousel-container">
+            
+            <div class="carousel"> 
+                <div class="carousel-slide">
+                    <img src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/coffee-1974841_1280.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/coffee-3120750_1280.jpg" alt="Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/coffee-2151200_1280.jpg" alt="Image 3">
+                </div>
+            </div>
+            </div></center><br>
+        <article class="item">
+          <p class="name">French Vanilla</p>
+          <p class="price">3.00</p>
+        </article>
+        <article class="item">
+          <p class="name">Carmel Macchiato</p>
+          <p class="price">3.75</p>
+        </article>
+        <article class="item">
+          <p class="name">Pumpkin Spice</p>
+          <p class="price">3.50</p>
+        </article>
+        <article class="item">
+          <p class="name">Hazelnut</p>
+          <p class="price">4.00</p>
+        </article>
+        <article class="item">
+          <p class="name">Mocha</p>
+          <p class="price">4.50</p>
+        </article>
+      </section>
+      <section>
+        <header>
+          <h2>Postres</h2>
+          <img class="menu-icon" src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/28036-200.png">
+        </header>
+        <center>
+          <div class="carousel-container">
+            
+            <div class="carousel"> 
+                <div class="carousel-slide">
+                    <img src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/entre-postres-mas-famosos-del-mundo-esta-la-tarta-pavlova.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/641110fa4e5d7.png" alt="Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./Cafetería ADSO _ Uso básicos de CSS para un menú_files/6JJCTJH34ZCNBJO2XMVKYYA5RA.jpg" alt="Image 3">
+                </div>
+            </div>
+            </div></center><br>
+        <article class="item">
+          <p class="name">Donut</p>
+          <p class="price">1.50</p>
+        </article>
+        <article class="item">
+          <p class="name">Cherry Pie</p>
+          <p class="price">2.75</p>
+        </article>
+        <article class="item">
+          <p class="name">Cheesecake</p>
+          <p class="price">3.00</p>
+        </article>
+        <article class="item">
+          <p class="name">Cinammon Roll</p>
+          <p class="price">2.50</p>
+        </article>
+      </section>
+    </main>
+    <hr>
+    <footer>
+      <p>Menú Cafetería 1.0 ADSO</p>
+      <p><a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/" target="_blank">Visite nuestro sitio web</a></p>
+         <p>ADSO 2560966</p>
+    </footer>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
