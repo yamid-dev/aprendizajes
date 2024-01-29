@@ -1,0 +1,204 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+ 
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-image: url(https://a-static.besthdwallpaper.com/recording-music-studio-wallpaper-2048x1536-96710_26.jpg);
+    margin: 0; 
+    padding: 0; 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    
+    color: black;
+  }
+  .body_dos{
+    background-image:url(https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBuZWdybyUyMGxpc298ZW58MHx8MHx8fDA%3D&w=1000&q=80);
+  }
+  
+  .menu {
+    margin: auto;
+    width: 80%;
+    height: 150%;
+    max-width: 550px;
+    padding: 45px;
+    background-color: black;
+    color: white;
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  hr {
+    height: 3px;
+    background-color: #969696;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  .established {
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  h1,
+  h2 {
+    font-family:'Montserrat', sans-serif;
+    font-size:50;
+  }
+  
+  section {
+    margin: 20px 0;
+  }
+
+  @font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap') format('truetype');
+    /* También puedes agregar otros formatos como woff, woff2, etc. */
+  }
+
+  
+  .item li {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-family: 'MiFuentePersonalizada', sans-serif;
+  }
+  
+  .name {
+    width: 69%;
+  }
+  
+  .price {
+    width: 29%;
+    text-align: right;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    text-align: center;
+    
+  }
+  
+  footer p,
+  foot a {
+    font-size: 14px;
+  }
+  
+  
+  a {
+    color: white;
+  }
+  
+  /* The following will be taught as a step just to make camper understands
+  the effect the visited pseudo-class has on a link.  The final color will be black.
+  */
+  
+  a:visited {
+    color: white;
+  }
+  
+  a:hover {
+    color: brown;
+  }
+  
+  a:active {
+    color: rgb(42, 165, 54);
+  }
+  
+  .menu-icon {
+    margin-top: -15px;
+    height: 80px;
+
+  }
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 500px;
+    grid-gap:40px;
+    padding: 100px 0;
+  }
+
+  .box img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .box:_nth-child(1){
+    grid-column-start: span 2;
+  }
+  .box:_nth-child(4){
+    grid-column-start: span 2;
+  }
+
+  @media(max-width:991px){
+    .container{
+      padding: 30px;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .box:nth-child(1){
+      grid-column-start: span 1;
+    }
+    .box:nth-child(4){
+      grid-column-start: span 1;
+    }
+  }
+  .tit_elect{
+    font-family: 'Courier New', Courier, monospace;
+    font-size:250%;
+    position: relative;
+    top:20px;
+    width: 80%;
+    color: white;
+
+  }
+  .boton_a{
+    font-family:'MiFuentePersonalizada', sans-serif;
+    background-color:#969696;
+    border-color: #969696;
+    margin-left: 0%;
+    width: 15%;
+    height: 40px;
+  }
+  .conts{
+    background-color: rgb(90, 86, 86);
+    height: 700px;
+  }
+  .box{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    color: white;
+    background-color: #424141;
+    height: 420px;
+    font-family: 'MiFuentePersonalizada', sans-serif;
+  }
+audio{
+  background-color: white;
+}
