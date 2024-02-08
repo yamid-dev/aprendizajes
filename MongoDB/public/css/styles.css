@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: #000;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Utiliza auto-fit con minmax() */
+    grid-template-rows: auto 1fr;
+    padding: 2%;
+}
+.title{
+    background: url("https://4.bp.blogspot.com/-alyN_qXbcJ4/T2AfTfkDoBI/AAAAAAAAIq4/slCmghbauoM/s1600/zoomgraf.blogspot.com+timeline+face+%28279%29.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: -1/1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    margin: 2%;
+    overflow-wrap: break-word;
+}
+ul{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Utiliza auto-fit con minmax() */
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin-top: 5%;
+    gap: 2%;
+}
+ul li{
+    list-style: none;
+    padding: 2%;
+    background: rgb(87, 87, 87);
+    width: 100%;
+    height: 100%;
+    color: rgb(240, 240, 240);
+    border-radius: 10px;
+    margin: 6% 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    justify-content: center;
+}
+ul li p{
+    text-align: center;
+}
+

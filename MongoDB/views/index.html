@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar datos de MongoDB</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+        <h1>Nombres de Libros desde MongoDB</h1>
+    </div>
+    <ul id="bookList"></ul>
+  
+    <script>
+      window.onload = function() {
+        fetch('/books')
+          .then(response => response.json())
+          .then(data => {
+            const bookList = document.getElementById('bookList');
+            data.forEach(book => {
+              const listItem = document.createElement('li');
+              listItem.innerHTML = `<p>Nombre del libro: ${book.Nombre}<br>Año: ${book.Año}</p>`;
+              bookList.appendChild(listItem);
+            });
+          })
+          .catch(error => console.error('Error al obtener datos:', error));
+      };
+    </script>
+    
+  </div>
+</body>
+</html>
