@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clases HTMX</title>
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-    <link rel="stylesheet" href="styles.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .loader{
+         width: 10px;
+         height: 10px;
+         border: 1px solid #000;
+         border-bottom-color: transparent;
+         border-radius: 50%;
+         display: inline-block;
+         box-sizing: border-box;
+         animation: rotation 1s linear infinite;
+      }
+      @keyframes rotation{
+         0%{
+            transform: rotate(0deg);
+         }
+         100%{
+            transform: rotate(360deg);
+         }
+      }
+      button:disabled{
+         opacity: .3;
+         pointer-events: none;
+         cursor: not-allowed;
+      }
+   </style>
 </head>
 <body>
-    
+   <div hx-ext="client-side-templates">
+      <button hx-get="http://hn.algolia.com/api/v1/search?tags=front_page" hx-disabled-elt="this" hx-trigger="click" hx-target="#results" hx-swap="innerHTML" hx-indicator=".loader" mustache-template="template-results">
+         Cargar resultados
+      </button>
+      <span class="htmx-indicator loader"></span>
+   
+      <ul id="results"></ul>
+   
+      <template id="template-results">
+         {{#hits}}
+         <li>
+            <a href="{{url}}">{{title}}</a> - {{url}}
+         </li>
+         {{/hits}}
+      </template>
+   </div>
+   <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
+   <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+   <script src="https://unpkg.com/mustache@latest"></script>   
 </body>
 </html>
