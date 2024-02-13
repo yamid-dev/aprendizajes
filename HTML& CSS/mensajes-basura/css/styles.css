@@ -61,11 +61,12 @@ ul li{
     align-items: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 .container .reprogramacion{
     grid-column: 2;
     border-left: 2px solid white;
-    background: url("https://static.wixstatic.com/media/bc97aa_656ca974f8904afea3ef97778c6b6b4b~mv2.webp");
+    background: url("https://media.cnnchile.com/sites/4/2022/02/pexels-mikhail-nilov-7683242.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,13 +74,37 @@ ul li{
 }
 .container .reprogramacion ul li{
     background-color: #004E7F;
+    opacity:0.8;
 }
 .container .mensajes-basura ul li{
     background-color: #4f4f4f;
+    opacity: 0.8;
+}
+.container .reprogramacion ul li:hover, .container .mensajes-basura ul li:hover{
+    opacity: 1;
+    border: 2px solid white;
 }
 .container .mensajes-basura{
     background: url("https://static.nationalgeographic.es/files/styles/image_3200/public/malaysia_gettyimages-166034720.jpg?w=1600&h=900");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.container .text{
+    color: white;
+    padding: 2%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .text p{
+    background: black;
+    opacity: 0.86;
+    width: 40%;
+    text-align: center;
+    padding: 1%;
+    font-size: 0.94rem;
 }
