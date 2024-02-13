@@ -15,7 +15,7 @@ for x in y:
     elif x == "ד":
         val += 4
         print("Letra Dalet")
-    elif x == "ה":
+    elif x == "ה"
         val += 5
         print("Letra He")
     elif x == "ו":
