@@ -13,8 +13,7 @@ class C(A):
         print("Hablando desde C")
 
 class D(B,C):
-    def hablar(self):
-        print("Hablando desde D")
+    pass
 
 d=D()
 d.hablar()
