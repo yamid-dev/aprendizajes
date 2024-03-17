@@ -44,5 +44,12 @@ class Estudiante(Persona):
 
 roberto = EmpleadoArtista("Roberto", 43, "Colombiano", "Cantar",1000000,"Marvy Systems")
 
+#propiedad issubclass que permite ver si una clase es hija de otra
+herencia = issubclass(EmpleadoArtista,Artista)
+print(herencia)
+#propiedad isinstance que permite ver si un objeto es una instancia de una clase
+instancia= isinstance(roberto,Estudiante)
+print(instancia)
+
 roberto.hablar()
 roberto.presentarse()
