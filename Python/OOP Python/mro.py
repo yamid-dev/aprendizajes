@@ -15,5 +15,5 @@ class D(C):
     pass
 #D>B>C>A
 d=D()
-d.hablar()
+A.hablar(d)
 print(D.__mro__)
