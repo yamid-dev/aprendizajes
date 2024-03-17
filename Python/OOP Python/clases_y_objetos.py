@@ -9,11 +9,18 @@ class Celular():
         self.marca = marca #esto es como decir celular 1|2|3.marca = marca
         self.modelo = modelo
         self.camara = camara
-    
+    #metodo = acciones o funciones que puede realizar nuestro objeto
+    def llamar(self):
+        return("Estas haciendo un llamado")
+
+    def cortar(self):
+        return("Cortaste la llamada")
+
 
 #Estas son instancias de la clase Celular
 celular1= Celular("Samsung","S23","48MPX") #Aquí ingresamos atributos basandonos en el método constructor que nos permite reutilizar código.
 
 celular2= Celular("Apple","Iphon 15","PRO")
+print(celular1.llamar())
 print(celular1.marca)
-print(celular2.marca)
+print(celular1.cortar())
