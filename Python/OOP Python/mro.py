@@ -12,6 +12,6 @@ class C(A):
 
 class D(B,C):
     pass
-
+#D>B>C>A
 d=D()
 d.hablar()
