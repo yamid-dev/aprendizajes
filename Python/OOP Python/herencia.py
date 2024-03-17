@@ -14,7 +14,7 @@ class Artista:
         self.habilidad = habilidad
         
     def mostrar_habilidad(self):
-        print(f"Mi habilidad es: {self.habilidad}")
+        return f"Mi habilidad es: {self.habilidad}"
 
 # Esta es una clase hija llamada Empleado que hereda características de las clases padre Persona y Artista (herencia múltiple).
 class EmpleadoArtista(Persona, Artista):
@@ -25,9 +25,10 @@ class EmpleadoArtista(Persona, Artista):
         self.salario = salario
         self.empresa = empresa
         
-  
+    def mostrar_habilidad(self):
+        return "No tengo jajaja"    
     def presentarse(self):
-        return(f"{self.mostrar_habilidad()}")
+        print(f"{super().mostrar_habilidad()}")
         
     # Aquí se podría sobrescribir el método hablar si se desea.
 
