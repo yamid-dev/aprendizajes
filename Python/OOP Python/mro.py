@@ -8,8 +8,7 @@ class B(A):
     pass
 
 class C(A):
-    def hablar(self):
-        print("Hablando desde C")
+    pass
 
 class D(B,C):
     pass
