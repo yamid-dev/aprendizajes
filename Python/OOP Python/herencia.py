@@ -6,14 +6,22 @@ class Persona:
         self.edad = edad
         self.nacionalidad = nacionalidad
     def hablar(self):
-        print ("Hola, estoy hablando un poco...")    
+        print ("Hola, estoy hablando un poco...")   
+class Artista:
+    def __init__(self, habilidad):
+        self.habilidad = habilidad
+    def mostrar_habilidad(self):
+        print(f"Mi habilidad es: {self.habilidad}")
 #Esta es una clase hija llamnada Empleado que hereda caracteristicas de la clase padre Persona   = Herencia simple
-class Empleado(Persona): #Superclase es Persona y Empleado es Subclase
-    def __init__(self,nombre,edad,nacionalidad,trabajo,salario):
+class EmpleadoArtista(Persona,Artista): #Superclase es Persona y Empleado es Subclase
+    def __init__(self,nombre,edad,nacionalidad,habilidad,empresa,salario):
         #constructor dentro de otro constructor
         super().__init__(nombre,edad,nacionalidad)
-        self.trabajo = trabajo
+        self.habilidad = habilidad
         self.salario  = salario
+        self.empresa = empresa
+    def presentarse(self):
+        return(f'Mi habilidad es: {self.mostrar_habilidad()}')
     #Aquí sobreescribí método
     # def hablar(self):
     #     print("Noooo")
@@ -28,9 +36,9 @@ class Estudiante(Persona): #Superclase es Persona y Empleado es Subclase
     # def hablar(self):
     #     print("Noooo")
 
-roberto = Empleado("Roberto",43,"Colombiano","programador",1000000)
+roberto = EmpleadoArtista("Roberto",43,"Colombiano","Cantar","programador",1000000)
 
 
 
 roberto.hablar()
-print(roberto.trabajo)
+roberto.mostrar_habilidad()
