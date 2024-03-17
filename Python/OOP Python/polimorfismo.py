@@ -18,5 +18,5 @@ gato = Gato()
 perro = Perro()
 
 #esto es polimorfismo porque el mensaje es el mismo solo que estoy cambiando el objeto en el que estoy implementando este método
-hacer_sonido(perro)
+hacer_sonido(perro) #Esto es polimorfismo de funcion
 hacer_sonido(gato)
