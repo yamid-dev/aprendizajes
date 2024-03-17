@@ -1,7 +1,7 @@
 #Ejercicio 2: Crear un sistema para una escuela
 #Clases: Persona, Estudiante
 #Atributos: Persona(nombre, edad) ,Estudiante(Personas(),grado)
-#Metodos: Persona(presentacion(nombre,edad), grado())
+#Metodos: Persona(presentacion(nombre,edad)), Estudiante(grado())
 #Reutilizar el codigo de la clase padre Persona, luego crea una instancia de la clase Estudiante e imprime sus atributos, además utiliza sus métodos
 
 class Persona:
