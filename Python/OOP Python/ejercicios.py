@@ -1,29 +1,25 @@
-#Ejercicio 2: Crear un sistema para una escuela
-#Clases: Persona, Estudiante
-#Atributos: Persona(nombre, edad) ,Estudiante(Personas(),grado)
-#Metodos: Persona(presentacion(nombre,edad)), Estudiante(grado())
-#Reutilizar el codigo de la clase padre Persona, luego crea una instancia de la clase Estudiante e imprime sus atributos, además utiliza sus métodos
+#Ejercicio 2: Crear un sistema para el modelado de animales de un zoológico
+#Clases: Animal,Mamifero,Ave, Murcielago
+#Metodos: Animal(comer()), Mamifero(amamntar()), Ave(volar())
+#Crea una clase Murcielago que hereda de Mamifero y Ave, ese orden, y por lo tanto ser capaz de amamantar y volar, además comer. Finalmente, juega con el orden de herencia de la clase Murcielago y observa como cambia el MRO y el comportamiento de los métodos al usar super() 
 
-class Persona:
-    def __init__(self,nombre,edad):
-        self.nombre = nombre
-        self.edad = edad
-    def presentacion(self):
-        print(f"Mi nombre es {self.nombre} y mi edad es {self.edad}")
+class Animal:
+    def comer(self):
+        print("El animal está comiendo")
 
-class Estudiante(Persona):
-    def __init__(self, nombre, edad, grado):
-        super().__init__(nombre, edad)
-        self.grado = grado
-    def grad(self):
-        print(f"Grado: {self.grado}")
+class Mamifero(Animal):
+    def amamantar(self):
+        print("El animal está amamantando")
 
-yamid = Estudiante('Yamid',21,'5 semestre')
-print(f'''
-DATOS DEL ESTUDIANTE: 
-Nombre: {yamid.nombre}
-Edad: {yamid.edad}
-Grado: {yamid.grado}
-''')
-yamid.presentacion()
-yamid.grad()
+class Ave(Animal):
+    def volar(self):
+        print("El animal está volando")
+
+class Murcielago(Ave,Mamifero):
+    pass
+
+murcielago = Murcielago()
+murcielago.comer()
+murcielago.amamantar()
+murcielago.volar()
+print(Murcielago.mro())
