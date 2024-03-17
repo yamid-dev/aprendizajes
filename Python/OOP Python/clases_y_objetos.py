@@ -11,16 +11,16 @@ class Celular():
         self.camara = camara
     #metodo = acciones o funciones que puede realizar nuestro objeto
     def llamar(self):
-        return("Estas haciendo un llamado")
+        return(f"Estas haciendo un llamado desde un: {self.modelo}")
 
     def cortar(self):
-        return("Cortaste la llamada")
+        return(f"Cortaste la llamada desde tu: {self.modelo}")
 
 
 #Estas son instancias de la clase Celular
 celular1= Celular("Samsung","S23","48MPX") #Aquí ingresamos atributos basandonos en el método constructor que nos permite reutilizar código.
 
 celular2= Celular("Apple","Iphon 15","PRO")
-print(celular1.llamar())
-print(celular1.marca)
-print(celular1.cortar())
+
+print(celular2.llamar())
+print(celular2.cortar())
