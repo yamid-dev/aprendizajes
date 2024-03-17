@@ -10,9 +10,11 @@
 class Animal:
     def sonido(self):
         pass
+    
 class Gato(Animal):
     def sonido(self):
         return "Miau"
+
 class Perro(Animal):
     def sonido(self):
         return "Guau"
@@ -25,3 +27,5 @@ perro = Perro()
 
 #esto es polimorfismo porque el mensaje es el mismo solo que estoy cambiando el objeto en el que estoy implementando este método
 hacer_sonido(perro)
+
+#Polimorfismo de sobrecarga = Te permite crear una clase con un mismo método pero depende de los parametros que le pases se convierta de un modo u otro
