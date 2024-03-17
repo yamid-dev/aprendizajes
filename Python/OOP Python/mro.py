@@ -5,8 +5,7 @@ class A:
         print("Hablando desde A")
 
 class B(A):
-    def hablar(self):
-        print("Hablando desde B")
+    pass
 
 class C(A):
     def hablar(self):
