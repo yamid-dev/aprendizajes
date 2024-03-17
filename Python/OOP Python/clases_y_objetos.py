@@ -1,28 +1,32 @@
-#EstoEsPascalCase
-#estoEsCamelCase
-#esto_es_snake_case
+#Ejercicio 1: Crear una clase estudiante que tenga los atributos nombre, edad y grado,además crear un método que se llame estudiar que imprima el mensaje "El estudiante (nombre) está estudiando.Crear una instancia de esta clase y utilizar el método, para esto se debe interactuar con el usuario y este debe brindar los atributos, y a continuación instanciar esta clase y mostrar los datos de la clase creada, si después de registrar al estudiante el usuario escribe estudiar ponen el estudiante a estudiar"
 
-#Esto es una clase llamada Celular
-class Celular():
-    #metodo constructor = metodo especial que cada vez que instanciamos esta clase automaticamente se ejecuta el método constructor.
-    def __init__(self,marca,modelo,camara): #self es una forma de hacer referencia a si mismo, al mismo objeto.
-        self.marca = marca #esto es como decir celular 1|2|3.marca = marca
-        self.modelo = modelo
-        self.camara = camara
-    #metodo = acciones o funciones que puede realizar nuestro objeto
-    def llamar(self):
-        return(f"Estas haciendo un llamado desde un: {self.modelo}")
+class Estudiante:
+    def __init__(self,nombre,edad,grado):
+        self.nombre = nombre
+        self.edad = edad
+        self.grado = grado
 
-    def cortar(self):
-        return(f"Cortaste la llamada desde tu: {self.modelo}")
+    def estudiar(self):
+        return (f"El estudiante {self.nombre} está estudiando")
+while True:    
+    print('Ejercicio 1: Ingresa los siguientes datos, al terminar escribe la palabra estudiar para comenzar: \n')
 
+    nombre = input("Escribe tu nombre: ")
+    edad = input("Escribe tu edad: ")
+    grado = input("Escribe tu grado: ")
+    escribir = input(": ")
 
-#Estas son instancias de la clase Celular
-celular1= Celular("Samsung","S23","48MPX") #Aquí ingresamos atributos basandonos en el método constructor que nos permite reutilizar código.
-celular2= Celular("Apple","Iphon 15","PRO")
-
-#Aquí llamo a los métodos de la clase utilizando sus instancias.
-print(celular2.llamar())
-print(celular2.cortar())
-print(celular1.llamar())
-print(celular1.cortar())
+    if escribir.lower()=="estudiar":
+        estudiante= Estudiante(nombre,edad,grado)
+        print(f'''
+DATOS DEL ESTUDIANTE:
+Nombre:{estudiante.nombre} 
+Edad: {estudiante.edad}
+Grado: {estudiante.grado}
+''')
+        print(estudiante.estudiar())
+        break
+    elif escribir.lower()=="cancelar":
+        break   
+    else:
+        print('¡Debes escribir la palabra estudiar para empezar, sino escribe cancelar!')
