@@ -4,19 +4,20 @@
 
 #Todas las variables en Python solo polimorfas (polimorfismo en tiempo de ejecución o de inclusión)
 
-class Gato:
+#Esto es polimorfismo de herencia o de subclases
+class Animal:
+    def sonido(self):
+        pass
+class Gato(Animal):
     def sonido(self):
         return "Miau"
-class Perro:
+class Perro(Animal):
     def sonido(self):
         return "Guau"
-
-def hacer_sonido(animal):
-    print(animal.sonido())    
-
+    
 gato = Gato()
 perro = Perro()
 
 #esto es polimorfismo porque el mensaje es el mismo solo que estoy cambiando el objeto en el que estoy implementando este método
-hacer_sonido(perro) #Esto es polimorfismo de funcion
-hacer_sonido(gato)
+print(perro.sonido())
+print(gato.sonido())
