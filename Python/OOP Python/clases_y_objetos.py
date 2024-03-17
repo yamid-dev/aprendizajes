@@ -19,8 +19,10 @@ class Celular():
 
 #Estas son instancias de la clase Celular
 celular1= Celular("Samsung","S23","48MPX") #Aquí ingresamos atributos basandonos en el método constructor que nos permite reutilizar código.
-
 celular2= Celular("Apple","Iphon 15","PRO")
 
+#Aquí llamo a los métodos de la clase utilizando sus instancias.
 print(celular2.llamar())
 print(celular2.cortar())
+print(celular1.llamar())
+print(celular1.cortar())
