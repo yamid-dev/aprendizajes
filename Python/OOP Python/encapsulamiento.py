@@ -1,7 +1,7 @@
 class MiClase:
     def __init__(self):
-        #Atributo privado
-        self._atributo_privado = "Valor"
+        #Atributo muy privado
+        self.__atributo_privado = "Valor"
         
 objeto = MiClase()
-print(objeto._atributo_privado)
+print(objeto.__atributo_privado)
