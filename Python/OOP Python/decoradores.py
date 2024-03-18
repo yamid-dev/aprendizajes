@@ -7,9 +7,15 @@ def decordador(function):
         print("Después de llamar a la función")
     return function_modificada
 
+# def saludo():
+#     print("Hola Yamid")
+    
+# saludo_modificado = decordador(saludo)
+
+# saludo_modificado()
+
+@decordador
 def saludo():
     print("Hola Yamid")
-    
-saludo_modificado = decordador(saludo)
 
-saludo_modificado()
+saludo()
