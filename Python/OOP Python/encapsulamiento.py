@@ -1,14 +1,24 @@
-class MiClase:
-    def __init__(self):
-        #Atributo muy privado
-        self.__atributo_privado = "Valor"
-    #Método muy privado
-    def __hablar(self):
-        print("Hola, estoy hablando")
-        
-objeto = MiClase()
-print(objeto.__hablar()) 
 
-#El atributo privado de python es el protedigo de otros lenguajes y el atributo mu privado es el privado de otros lenguajes
+#Getters y Setters: Getters obtenedor y setters establecedor. Dos métodos para acceder a propiedades privadas que tienen las clases o incluso modificarlas.
 
-#Getters y Setters: Getters obtenedor y setters establecedor. 
+class Persona:
+    def __init__(self,nombre,edad):
+        self._nombre = nombre
+        self._edad = edad
+   
+    #Getter es un método que nos permite acceder a un valor "privado" o "muy privado"
+    def get_nombre(self):
+        return self._nombre
+    
+    #Setter es un método que permite establecer un valor "privado" o "muy privado"
+    def set_nombre(self, new_nombre):
+        self._nombre = new_nombre
+
+#En este bloque instancié un objeto de la clase Persona, después accedí a un atributo privado nombre con el getter, lo imprimí, establecí un nuevo nombre con setter, después volví a acceder al mismo con getter para finalmente volverlo a imprimir
+persona = Persona("Yamid",21)
+nombre = persona.get_nombre()
+print(nombre)
+persona.set_nombre("Pepito")
+nombre = persona.get_nombre()
+print(nombre)
+
