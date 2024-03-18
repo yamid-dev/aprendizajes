@@ -20,7 +20,10 @@ print(suma(1,2,3,4,5))
 EJEMPLO DE  KWARGS
 '''
 
-
+def mostrar_info(**kwargs):
+    for key, value in kwargs.items():
+        print(key, ":", value)
+mostrar_info(nombre="Juan",edad=30)
         # def __init__(self,*args,**kwargs):
         #     self.objeto_original = cls(*args,**kwargs)
         #     self.atributo_nuevo = "Atributo añadido por el decorador"
