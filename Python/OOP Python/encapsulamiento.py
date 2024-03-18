@@ -17,7 +17,7 @@ class Persona:
 persona = Persona("Yamid",21)
 nombre = persona.get_nombre()
 print(nombre)
-persona.set_nombre("Pepito")
+persona.__nombre = "Pepito"
 nombre = persona.get_nombre()
 print(nombre)
 
