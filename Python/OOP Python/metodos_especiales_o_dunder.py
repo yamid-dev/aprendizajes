@@ -10,15 +10,22 @@ class Persona:
     
     def __repr__(self):
         return f'Persona("{self.nombre}",{self.edad})'
+    def __add__(self,otro):
+        nuevo_valor = self.edad + otro.edad
+        return Persona(self.nombre + otro.nombre, nuevo_valor)
 
 persona = Persona("Yamid",21)
-repre = repr(persona) #repre es la representación del objeto para luego reconstruirlo
-resultado = eval(repre) #resultado ya es el objeto reconstruido, eval se utiliza para evaluar una cadena de texto que representa una expresión o declaración en Python. En este caso repre contiene una representación en forma de cadena del objeto Persona generada utilizando __repr__.
+pedro = Persona("Pedro",30)
+
+resultado = persona + pedro
+print(resultado)
+# repre = repr(persona) #repre es la representación del objeto para luego reconstruirlo
+# resultado = eval(repre) #resultado ya es el objeto reconstruido, eval se utiliza para evaluar una cadena de texto que representa una expresión o declaración en Python. En este caso repre contiene una representación en forma de cadena del objeto Persona generada utilizando __repr__.
 
 #Cuando se llama eval(repre) se evalua la cadena repre, que contiene la representación de la instancia de la clase Persona. Esto tiene en el efecto de reconstruir un nuevo objeto Persona utilizando la cadena de representación. En esencia, 'eval' ejecuta el código representado por la cadena. Se debe utilizar con precaución especialmente en aplicaciones que interactuan con usuarios externos o datos no confiables ya que ejecuta el código de la cadena de manera directa y puede ser una puerta trasera pra inyección de código malicioso.
 
-print(repre)
-print(resultado.nombre)
+# print(repre)
+# print(resultado.nombre)
 
 #Sobrecarga de operadores = ó operator overloading. Es una caracteristica que permite definir cómo deben comportarse los operadores cuando se aplica a tipos de datos personalizados, como clases y objetos. Permite proporcionar una implementación personalizada para operadores estándar como +,-,*,/,%, ==, !=, etc. en tus propias clases. Puedes definir el significado de estos operadores para tus propios tipos de datos, lo que les permite comportarse de la misma manera que los tipos de datos incorporados por el lenguaje.
 
