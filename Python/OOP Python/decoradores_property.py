@@ -28,7 +28,4 @@ print(nombre)
 
 del persona.nombre
 
-nombre = persona.nombre
-print(nombre)
-
 print("¿Qué haces?")
