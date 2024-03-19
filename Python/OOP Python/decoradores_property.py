@@ -26,6 +26,7 @@ persona.nombre="Horacio"
 nombre = persona.nombre
 print(nombre)
 
+#Aqui llamo al deleter para eliminar la propiedad especificada
 del persona.nombre
 
 print("¿Qué haces?")
