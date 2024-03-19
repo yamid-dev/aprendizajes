@@ -8,13 +8,19 @@ class Persona:
     @property
     def nombre(self):
         return self.__nombre
-
+    @nombre.setter 
+    def nombre(self, new_nombre):
+        self.__nombre = new_nombre
+    
 
 persona = Persona("Yamid",21)
 
 #property le dice no trates el getter como una función sino como una propiedad, compara con el archivo de encapsulamiento
 nombre = persona.nombre
 print(nombre)
-persona.__nombre = "Horacio"
+
+persona.nombre = "Horacio"
+
+nombre = persona.nombre
 print(nombre)
 
