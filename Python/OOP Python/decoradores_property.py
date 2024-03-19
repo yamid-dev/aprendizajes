@@ -12,7 +12,7 @@ class Persona:
     def nombre(self, new_nombre):
         self.__nombre = new_nombre
     @nombre.deleter 
-    def nombre(self, new_nombre):
+    def nombre(self):
         del self.__nombre #esto va a eliminar valores
 
 persona = Persona("Yamid",21)
@@ -21,8 +21,14 @@ persona = Persona("Yamid",21)
 nombre = persona.nombre
 print(nombre)
 
-del persona.nombre
+persona.nombre="Horacio"
 
-nombre = persona.nombre #como estoy intentando acceder a una propiedad que no existe, mostrará error
+nombre = persona.nombre
 print(nombre)
 
+del persona.nombre
+
+nombre = persona.nombre
+print(nombre)
+
+print("¿Qué haces?")
