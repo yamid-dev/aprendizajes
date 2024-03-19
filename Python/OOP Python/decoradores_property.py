@@ -11,7 +11,9 @@ class Persona:
     @nombre.setter 
     def nombre(self, new_nombre):
         self.__nombre = new_nombre
-    
+    @nombre.deleter 
+    def nombre(self, new_nombre):
+        del self.__nombre #esto va a eliminar valores
 
 persona = Persona("Yamid",21)
 
@@ -19,7 +21,7 @@ persona = Persona("Yamid",21)
 nombre = persona.nombre
 print(nombre)
 
-persona.nombre = "Horacio"
+del persona.nombre
 
 nombre = persona.nombre
 print(nombre)
