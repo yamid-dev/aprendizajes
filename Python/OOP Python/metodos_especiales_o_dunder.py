@@ -17,8 +17,8 @@ class Persona:
 persona = Persona("Yamid",21)
 pedro = Persona("Pedro",30)
 
-resultado = persona + pedro
-print(resultado)
+nueva_persona = persona + pedro
+print(nueva_persona.edad)
 # repre = repr(persona) #repre es la representación del objeto para luego reconstruirlo
 # resultado = eval(repre) #resultado ya es el objeto reconstruido, eval se utiliza para evaluar una cadena de texto que representa una expresión o declaración en Python. En este caso repre contiene una representación en forma de cadena del objeto Persona generada utilizando __repr__.
 
