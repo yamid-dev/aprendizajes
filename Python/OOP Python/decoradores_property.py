@@ -23,6 +23,6 @@ print(nombre)
 
 del persona.nombre
 
-nombre = persona.nombre
+nombre = persona.nombre #como estoy intentando acceder a una propiedad que no existe, mostrará error
 print(nombre)
 
