@@ -1,4 +1,4 @@
-#Clase abstracta es una clase que no podemos instanciar, es una reseta, modelo, o plantilla para crear clases apartir de esa plantilla
+#Clase abstracta es una clase que no podemos instanciar, es una reseta, modelo, o plantilla para crear clases apartir de esa plantilla, se parece a la herencia de clases, pero en el caso de la clase abstracta, si creamos nuevas clases obligamos a que si o si debamos implementar los métodos definidos en la clase abstracta, esto fomenta el polimorfismo.
 
 #Implementar un método significa definir cómo va a funcionar
 
@@ -10,6 +10,7 @@ class Persona(ABC):
     
     #esto es un método abstracto
     @abstractclassmethod
+    #init es un método especial
     def __init__(self, nombre, edad, sexo, actividad):
         self.nombre = nombre
         self.edad = edad
