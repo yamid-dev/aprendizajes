@@ -1,3 +1,4 @@
+#abstraccion: ocultar o ignorar la complejidad interna del código, detalles especificos, y centrarse solo en los aspectos relevantes para un proposito particular, se utiliza para ocultar detalles de implementación, crear interfaces claras y simplificadas 
 class Auto():
     def __init__(self):
         self._estado = "apagado"
