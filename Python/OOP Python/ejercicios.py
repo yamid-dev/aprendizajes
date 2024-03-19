@@ -1,25 +1,17 @@
-#Ejercicio 2: Crear un sistema para el modelado de animales de un zoológico
-#Clases: Animal,Mamifero,Ave, Murcielago
-#Metodos: Animal(comer()), Mamifero(amamntar()), Ave(volar())
-#Crea una clase Murcielago que hereda de Mamifero y Ave, ese orden, y por lo tanto ser capaz de amamantar y volar, además comer. Finalmente, juega con el orden de herencia de la clase Murcielago y observa como cambia el MRO y el comportamiento de los métodos al usar super() 
+#Ejercicio 3: Crear un juego de fusión
+'''El juego consiste en crear personajes un juego y que esos personajes se puedan fusionar para formar personajes más poderosos que tengan más poder...
 
-class Animal:
-    def comer(self):
-        print("El animal está comiendo")
+Para ello deberemos cambiar el comportamiento del operador "+" para que cuando los personajes se fusionen, salga un nuevo personaje con habilidades mejoradas
 
-class Mamifero(Animal):
-    def amamantar(self):
-        print("El animal está amamantando")
+Una posible formula es: el promedio de las habilidades de ambos al cuadrado'''
 
-class Ave(Animal):
-    def volar(self):
-        print("El animal está volando")
-
-class Murcielago(Ave,Mamifero):
-    pass
-
-murcielago = Murcielago()
-murcielago.comer()
-murcielago.amamantar()
-murcielago.volar()
-print(Murcielago.mro())
+class Personaje:
+    def __init___(self, nombre, fuerza, velocidad):
+        self.nombre = nombre
+        self.fuerza = fuerza
+        self.velocidad = velocidad
+    def __repr__(self):
+        return f"{self.nombre} (fuerza: {self.fuerza}, velocidad: {self.velocidad})"
+    
+goku = Personaje("Goku",100,100)
+print(goku)
