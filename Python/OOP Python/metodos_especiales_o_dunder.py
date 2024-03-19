@@ -10,14 +10,17 @@ class Persona:
     
     def __repr__(self):
         return f'Persona("{self.nombre}",{self.edad})'
+    
+    #Aquí defino que pasa con los objetos cuando los sumo
     def __add__(self,otro):
         nuevo_valor = self.edad + otro.edad
         return Persona(self.nombre + otro.nombre, nuevo_valor)
 
 persona = Persona("Yamid",21)
 pedro = Persona("Pedro",30)
+maria = Persona("Maria",18)
 
-nueva_persona = persona + pedro
+nueva_persona = persona + pedro + maria
 print(nueva_persona.edad)
 # repre = repr(persona) #repre es la representación del objeto para luego reconstruirlo
 # resultado = eval(repre) #resultado ya es el objeto reconstruido, eval se utiliza para evaluar una cadena de texto que representa una expresión o declaración en Python. En este caso repre contiene una representación en forma de cadena del objeto Persona generada utilizando __repr__.
