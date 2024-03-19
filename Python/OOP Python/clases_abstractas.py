@@ -10,16 +10,27 @@ class Persona(ABC):
     
     #esto es un método abstracto
     @abstractclassmethod
-    def __init__(self, nombre, edad, sexo):
+    def __init__(self, nombre, edad, sexo, actividad):
         self.nombre = nombre
         self.edad = edad
         self.sexo = sexo
+        self.actividad = actividad
+        
     #esto también es un método abstracto        
     @abstractclassmethod
-    def trabajar(self):
+    def hacer_actividad(self):
         pass
     
     def presentarse(self):
         print(f"Hola, me llamo {self.nombre} y tengo {self.edad} años")
 
-persona = Persona("Yamid",21,"Masculino","Programador") 
+class Estudiante(Persona):
+    def __init__(self,nombre,edad,sexo,actividad):
+        super().__init__(nombre,edad,sexo,actividad)
+        
+    #el abstract method class hace que obligatoriamente debas crear una implementación para ese método 
+    def hacer_actividad(self):
+        print(f"Estoy estudiando: {self.actividad}")
+        
+persona = Estudiante("Lucas",21,"Masculino","programación")
+persona.hacer_actividad()
