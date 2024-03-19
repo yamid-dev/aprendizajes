@@ -32,5 +32,25 @@ class Estudiante(Persona):
     def hacer_actividad(self):
         print(f"Estoy estudiando: {self.actividad}")
         
-persona = Estudiante("Lucas",21,"Masculino","programación")
-persona.hacer_actividad()
+class Estudiante(Persona):
+    def __init__(self,nombre,edad,sexo,actividad):
+        super().__init__(nombre,edad,sexo,actividad)
+        
+    #el abstract method class hace que obligatoriamente debas crear una implementación para ese método 
+    def hacer_actividad(self):
+        print(f"Estoy estudiando: {self.actividad}")
+
+class Trabajador(Persona):
+    def __init__(self,nombre,edad,sexo,actividad):
+        super().__init__(nombre,edad,sexo,actividad)
+        
+    #el abstract method class hace que obligatoriamente debas crear una implementación para ese método 
+    def hacer_actividad(self):
+        print(f"Estoy trabajando actualmente en el rubro de: {self.actividad}")
+        
+lucas = Estudiante("Lucas",21,"Masculino","programación")
+lucas.presentarse()
+lucas.hacer_actividad()
+pedro = Trabajador("Pedro",30,"Masculino","programación")
+pedro.presentarse()
+pedro.hacer_actividad()
