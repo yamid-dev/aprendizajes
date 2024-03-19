@@ -14,5 +14,4 @@ persona = Persona("Yamid",21)
 
 #property le dice no trates el getter como una función sino como una propiedad, compara con el archivo de encapsulamiento
 nombre = persona.nombre
-persona.nombre = "Horacio"
 print(nombre)
