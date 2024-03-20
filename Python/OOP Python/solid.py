@@ -1,34 +1,18 @@
 #SRC,OCP,LCP,ISP,DIP
-#PRINCIPIO DE SEGREGACIÓN DE LA INTERFAZ (ISP) = Ningun cliente tiene que ser forzado a depender de interfaces que no utilice.
+#PRINCIPIO DE INVERSIÓN DE DEPENDENCIAS (DIP) = Establece dos cosas:
 
-from abc import ABC, abstractmethod
+#1- Los módulos de alto nivel no tienen que depender de los de bajo nivel, sino que los dos tienen que depender de las abstracciones.
+#2- Las abstracciones no deben depender de los detalles, sino los detalles depender de las abstracciones.
 
-class Trabajador(ABC):
-    @abstractmethod
-    def trabajar(self):
-        pass
-class Comedor(ABC):
-    @abstractmethod
-    def comer(self):
-        pass
-class Durmiente(ABC):
-    @abstractmethod
-    def dormir(self):
+class Diccionario:
+    def verificar_palabra(self,palabra):
+        #Lógica para verificar palabras
         pass
 
-#Esto no violará el principio de segregación de interfaces
-class Humano(Trabajador,Durmiente,Comedor):
-    def comer(self):
-        print("El humano está comiendo")
-    def trabajar(self):
-        print("El humano está trabajando")
-    def dormir(self):
-        print("El humano está durmiendo")
-
-class Robot(Trabajador):
-    
-    def trabajar(self):
-        print("El robot está trabajando")
-
-robot = Robot()
-robot.trabajar()
+#la clase más importante es corrector ortográfico y está dependiendo de la clase Diccionario que es una 'mini-interfaz'
+class CorrectorOrtografico:
+    def __init__(self):
+        self.diccionario = Diccionario()
+    def corregir_texto(self,texto):
+        #usamos el diccionario para corregir el texto
+        pass
