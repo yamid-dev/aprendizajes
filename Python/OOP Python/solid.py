@@ -1,18 +1,20 @@
-'''Principios SOLID = 
-
-¿Hasta dónde voy a llevar lo que estoy escribiendo?
-
-¿Nos importa que crezca?
-
-Si queremos que crezca debemos hacer que sea mantenible y modificable, tener un estructura clara, que sea reutilizable (modulos,clases y funciones), independientes, y que se puedan utilizar en otro proyecto. Que sea facil y entendible de leer, comentar cuando sea necesario, convenciones de estilo, que sea extensible sin necesidad de afectar el código.
-
-S->SRP = PRINCIPIO DE RESPONSABILIDAD ÚNICO
-O->OCP = PRINCIPIO DE ABIERTO/CERRADO
-L->LCP = PRINCIPIO DE SUSTITUCIÓN DE LOSKOV
-I->ISP = PRINCIPIO DE SEGREGACIÓN DE INTERFAZ
-D->DIP = PRINCIPIO DE INVERSIÓN DE DEPENDENCIAS 
-
-NO SEGUIR LOS PRINCIPIOS SOLID ES UNA MALA PRÁCTICA
+#SRC,OCP,LCP,ISP,DIP
+#PRINCIPIO DE RESPONSABILIDAD ÚNICA (SRC) =  Una clase solo tiene que tener una responsabilidad o tarea, tiene que tener una y solo una razón para cambiar.
 
 
-'''
+#ESTO NO SIGUE EL PRINCIPIO DE RESPONSABILIDAD ÚNICA
+class Auto():
+    def __init__(self):
+        self.posicion = 0
+        self.combustible = 100
+    def mover(self,distancia):
+        if self.comustible >= distancia/2:
+            self.posicion +=distancia
+            self.combustible -= distancia/2
+        else:
+            print("No hay suficiente combustible")
+    def agregar_combustible(self,cantidad):
+        self.combustible +=cantidad
+    
+    def obtener_combustible(self):
+        return self.combustible
