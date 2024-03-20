@@ -5,8 +5,8 @@
 #ESTO SI SIGUE EL PRINCIPIO DE RESPONSABILIDAD ÚNICA SRC.
 class Auto():
     def __init__(self,tanque):
-        self.posicion = 0
-        self.tanque = tanque
+        self.posicion = 0 #Esto es un atributo estático
+        self.tanque = tanque #Esto es un atributo de instancia
     def mover(self,distancia):
         if self.tanque.obtener_combustible() >= distancia/2:
             self.posicion +=distancia
