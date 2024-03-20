@@ -4,18 +4,20 @@
 from abc import ABC, abstractmethod
 
 class Trabajador(ABC):
-
-    @abstractmethod
-    def comer(self):
-        pass
     @abstractmethod
     def trabajar(self):
         pass
+class Comedor(ABC):
+    @abstractmethod
+    def comer(self):
+        pass
+class Durmiente(ABC):
     @abstractmethod
     def dormir(self):
         pass
 
-class Humano(Trabajador):
+#Esto no violará el principio de segregación de interfaces
+class Humano(Trabajador,Durmiente,Comedor):
     def comer(self):
         print("El humano está comiendo")
     def trabajar(self):
@@ -23,11 +25,10 @@ class Humano(Trabajador):
     def dormir(self):
         print("El humano está durmiendo")
 
-#Esto violaría el principio de segregación de interfaz pues un Robot no come ni duerme.
 class Robot(Trabajador):
-    def comer(self):
-        pass
+    
     def trabajar(self):
         print("El robot está trabajando")
-    def dormir(self):
-        pass
+
+robot = Robot()
+robot.trabajar()
