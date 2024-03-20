@@ -1,26 +1,33 @@
 #SRC,OCP,LCP,ISP,DIP
-#PRINCIPIO DE SUSTITUCIÓN DE LISKOV (LSP) =  Las clases derivadas deben ser sustituidas por sus clases base
+#PRINCIPIO DE SEGREGACIÓN DE LA INTERFAZ (ISP) = Ningun cliente tiene que ser forzado a depender de interfaces que no utilice.
 
-#ESTO NO CUMPLE EL PRINCIPIO DE SUSTITUCIÓN DE LISKOV PORQUE EL PINGUINO DEBERÍA VOLAR SI HEREDA DE LA CLASE AVE.
-# class Ave:
-#     def volar(self):
-#         return "Estoy volando"
-# class Pinguino(Ave):
-#     def volar(self):
-#         return "No puedo volar"
-    
-# def hacer_volar(ave = Ave):
-#     return ave.volar()
+from abc import ABC, abstractmethod
 
-# print(hacer_volar(Pinguino()))
+class Trabajador(ABC):
 
-#ESTO SERÍA APLICAR EL PRINCIPIO DE SUSTITUCIÓN DE LISKOV
-class Ave:
-    pass
+    @abstractmethod
+    def comer(self):
+        pass
+    @abstractmethod
+    def trabajar(self):
+        pass
+    @abstractmethod
+    def dormir(self):
+        pass
 
-class AveVoladora(Ave):
-    def volar(self):
-        return "Estoy volando"
+class Humano(Trabajador):
+    def comer(self):
+        print("El humano está comiendo")
+    def trabajar(self):
+        print("El humano está trabajando")
+    def dormir(self):
+        print("El humano está durmiendo")
 
-class AveNoVoladora(Ave):
-    pass
+#Esto violaría el principio de segregación de interfaz pues un Robot no come ni duerme.
+class Robot(Trabajador):
+    def comer(self):
+        pass
+    def trabajar(self):
+        print("El robot está trabajando")
+    def dormir(self):
+        pass
