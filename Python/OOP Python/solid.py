@@ -1,43 +1,27 @@
 #SRC,OCP,LCP,ISP,DIP
-#PRINCIPIO DE RESPONSABILIDAD ÚNICA (SRC) =  Una clase solo tiene que tener una responsabilidad o tarea, tiene que tener una y solo una razón para cambiar.
+#PRINCIPIO ABIERTO/CERRADO (OCP) = LAS CLASES, LOS MODULOS, LAS FUNCIONES TIENEN QUE ESTAR ABIERTAS PARA LA EXTENSION PERO CERRADAS PARA LA MODIFICACIÓN. NO ES BUENO MODIFICAR EL CÓDIGO DE UNA CLASE
 
+class Notificador:
+    def __init__(self, usuario, mensaje):
+        self.usuario = usuario
+        self.mensaje = mensaje
 
-#ESTO SI SIGUE EL PRINCIPIO DE RESPONSABILIDAD ÚNICA SRC.
-class Auto():
-    def __init__(self,tanque):
-        self.posicion = 0 #Esto es un atributo estático
-        self.tanque = tanque #Esto es un atributo de instancia
-    def mover(self,distancia):
-        if self.tanque.obtener_combustible() >= distancia/2:
-            self.posicion +=distancia
-            self.tanque.usar_combustible(distancia/2)
-            return "El auto se está moviendo"
-        else:
-            return "No hay sufisciente combustible"
-    def obtener_posicion(self):
-        return self.posicion
-
-class TanqueDeCombustible:
-    def __init__(self):
-        self.combustible = 100
-
-    def agregar_combustible(self,cantidad):
-        self.combustible +=cantidad
+    def notificar(self):
+        raise NotImplementedError
     
-    def obtener_combustible(self):
-        return self.combustible
-    def usar_combustible(self,cantidad):
-        self.combustible -= cantidad
-tanque = TanqueDeCombustible()
-autito = Auto(tanque)
-print(autito.obtener_posicion())
-print(autito.mover(10))
-print(autito.obtener_posicion())
-print(autito.mover(20))
-print(autito.obtener_posicion())
-print(autito.mover(60))
-print(autito.obtener_posicion())
-print(autito.mover(100))
-print(autito.obtener_posicion())
-print(autito.mover(100))
-print(autito.obtener_posicion())
+class Notificador_Email(Notificador):
+    def notificar (self):
+        print(f"Enviando mensaje a {self.usuario.email}")
+
+class Notificador_SMS(Notificador):
+    def notificar(self):
+        print(f"Enviando mensaje a {self.usuario.sms}")
+
+class Notificador_Whatsapp(Notificador):
+    def notificar(self):
+        print(f"Enviando mensaje a {self.usuario.whatsapp }")
+
+#Puedo agregar más implementaciones de la clase Notificador, pero no estoy modificando la misma cumpliendo de esta manera el principio de abierto/cerrado
+class Notificador_Twitter(Notificador):
+    def notificar(self):
+        print(f"Enviando mensaje a {self.usuario.twitter}")
