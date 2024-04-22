@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 // import App from './App.jsx'
 // import './index.css'
 
 //Esto es una función normal que devuelve o retorna un botón, pero react utiliza componentes
-function createButton({texto}){
+const Button = ({texto}) => {
   return(
     <button>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -17,10 +18,8 @@ function createButton({texto}){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <React.Fragment>
-  {createButton({texto:"Button 1"})}
-  {createButton({texto:"Button 2"})}
-  {createButton({texto:"Button 3"})}
-  {createButton({texto:"Button 4"})}
-  {createButton({texto:"Button 5"})}
+  <Button texto="Botón 1"/>
+  <Button texto="Botón 2"/>
+  <Button texto="Botón 3"/>
 </React.Fragment>
 )
