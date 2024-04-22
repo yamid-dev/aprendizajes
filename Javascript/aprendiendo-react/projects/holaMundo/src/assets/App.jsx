@@ -8,26 +8,28 @@ export function App () {
             <h3>Yamid Horacio Rodríguez</h3> <--- children
         </TwitterFollowCard>
     */
-
+    const yamiddev = {isFollowing : true, userName : 'yamid-dev'}
+    const midudev = {isFollowing : true, userName : 'midudev'}
+    const mouredev = {isFollowing : true, userName : 'mouredev'}
+    const mariadev = {isFollowing : true, userName : 'soyDalto'}
     return(
         <section className='App'>
             <React.Fragment>
-                <TwitterFollowCard userName="yamid-dev">
+                <TwitterFollowCard {...yamiddev}>
                     <h3>Yamid Horacio Rodríguez</h3>
                 </TwitterFollowCard>
 
-                <TwitterFollowCard 
-                userName="midudev">
+                <TwitterFollowCard  {...midudev}>
                     <h3>Miguel Ángel Durán García</h3>
                 </TwitterFollowCard>
 
                 <TwitterFollowCard
-                userName="mouredev">
+                {...mouredev}>
                     <strong>Brais Moure</strong>
                 </TwitterFollowCard>
 
                 <TwitterFollowCard      
-                userName="MariaDev">
+                {...mariadev}>
                     <strong>Maria Palomino</strong>
                 </TwitterFollowCard>
                 
