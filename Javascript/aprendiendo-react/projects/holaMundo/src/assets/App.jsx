@@ -2,6 +2,13 @@ import React from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFolloCard'
 export function App () {
+
+    /*Children
+        <TwitterFollowCard userName="yamid-dev">
+            <h3>Yamid Horacio Rodríguez</h3> <--- children
+        </TwitterFollowCard>
+    */
+
     return(
         <section className='App'>
             <React.Fragment>
@@ -16,13 +23,14 @@ export function App () {
 
                 <TwitterFollowCard
                 userName="mouredev">
-                    <h3>Brais Moure</h3>
+                    <strong>Brais Moure</strong>
                 </TwitterFollowCard>
 
                 <TwitterFollowCard      
                 userName="MariaDev">
-                    <h3>Maria Palomino</h3>
+                    <strong>Maria Palomino</strong>
                 </TwitterFollowCard>
+                
             </React.Fragment>     
         </section>
     )
