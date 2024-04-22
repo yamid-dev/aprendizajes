@@ -1,7 +1,13 @@
+import React from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFolloCard'
 export function App () {
     return(
-        <TwitterFollowCard />
+        <React.Fragment>
+            <TwitterFollowCard />
+            <TwitterFollowCard />
+            <TwitterFollowCard />
+            <TwitterFollowCard />
+        </React.Fragment>
     )
 }
