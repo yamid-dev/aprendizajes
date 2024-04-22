@@ -2,30 +2,28 @@ import React from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFolloCard'
 export function App () {
-    //Esto es un elemento
-    const formattedUserName = <span>@YamidDev</span>
-    //esto es un componente reutilizable que nos está devolviendo elementos que luego vamos a retornar en react 
     return(
         <section className='App'>
-            <TwitterFollowCard 
-            formattedUserName = {formattedUserName}
-            userName="yamid-dev" 
-            name="Yamid Horacio Rodríguez"/>
+            <React.Fragment>
+                <TwitterFollowCard userName="yamid-dev">
+                    <h3>Yamid Horacio Rodríguez</h3>
+                </TwitterFollowCard>
 
-            <TwitterFollowCard
-            formattedUserName = {formattedUserName} 
-            userName="midudev" 
-            name="Miguel Ángel Durán García" />
+                <TwitterFollowCard 
+                userName="midudev">
+                    <h3>Miguel Ángel Durán García</h3>
+                </TwitterFollowCard>
 
-            <TwitterFollowCard
-            formattedUserName = {formattedUserName}
-            userName="mouredev" 
-            name="Brais Moure"/>
+                <TwitterFollowCard
+                userName="mouredev">
+                    <h3>Brais Moure</h3>
+                </TwitterFollowCard>
 
-            <TwitterFollowCard
-            formattedUserName = {formattedUserName} 
-            userName="MariaDev" 
-            name="Maria Dev"/>
+                <TwitterFollowCard      
+                userName="MariaDev">
+                    <h3>Maria Palomino</h3>
+                </TwitterFollowCard>
+            </React.Fragment>     
         </section>
     )
 }

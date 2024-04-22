@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     color: #fff;
-    background: #1c1c1c;
+    background: #292929;
     padding: 2%;
     border-radius: 3%;
     font-size: .8rem;
@@ -36,6 +36,5 @@
 }
 .tw-followCard .tw-followCard-button:hover{
     background: black;
-    border: white;
     color: white;
 }
