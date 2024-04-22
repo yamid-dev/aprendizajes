@@ -4,10 +4,10 @@ import { TwitterFollowCard } from './TwitterFolloCard'
 export function App () {
     return(
         <React.Fragment>
-            <TwitterFollowCard />
-            <TwitterFollowCard />
-            <TwitterFollowCard />
-            <TwitterFollowCard />
+            <TwitterFollowCard userName="yamiddev" name="Yamid Horacio Rodríguez"/>
+            <TwitterFollowCard userName="midudev" name="Mauricio Rozo" />
+            <TwitterFollowCard userName="christian" name="Christian Martinez"/>
+            <TwitterFollowCard userName="valexd" name="Valentina Velandia"/>
         </React.Fragment>
     )
 }
