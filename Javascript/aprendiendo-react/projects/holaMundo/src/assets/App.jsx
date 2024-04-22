@@ -4,7 +4,7 @@ import { TwitterFollowCard } from './TwitterFolloCard'
 export function App () {
     //Esto es un elemento
     const formattedUserName = <span>@YamidDev</span>
-    //esto es un componente reutilizable 
+    //esto es un componente reutilizable que nos está devolviendo elementos que luego vamos a retornar en react 
     return(
         <section className='App'>
             <TwitterFollowCard 

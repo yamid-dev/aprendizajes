@@ -1,4 +1,5 @@
 export function TwitterFollowCard ({formattedUserName,userName,name}){
+    //Todos estos son elementos que retornamos desde los componentes a react, para que el los renderice
     return(
         <article className='tw-followCard'>
             <header className='tw-followCard-header'>
