@@ -9,24 +9,31 @@ db.on('error', console.error.bind(console, 'Error de conexión a la base de dato
 db.once('open', async () => {
   console.log('Conexión exitosa a la base de datos');
 
-  // Define el esquema del usuario
   const booksSchema = new mongoose.Schema({
-    name: String,
-    year: String,
-    // Otros campos del usuario
+    Nombre: {
+      type: String,
+      required: true
+    },
+    Año: {
+      type: String,
+      required: true
+    },
+    imagen: {
+      data: Buffer,
+      contentType: String
+    }
   });
+  
 
-  // Crea el modelo del usuario
   const Book = mongoose.model('Books', booksSchema);
+  module.exports = Book;
 
   try {
-    // Ejemplo de consulta a la colección de usuarios utilizando await
     const books = await Book.find({});
     console.log('Libros encontrados:', books);
   } catch (err) {
     console.error('Error al buscar usuarios:', err);
   } finally {
-    // Cierra la conexión después de la consulta
     mongoose.connection.close();
   }
 });

@@ -22,6 +22,11 @@
             data.forEach(book => {
               const listItem = document.createElement('li');
               listItem.innerHTML = `<p>Nombre del libro: ${book.Nombre}<br>Año: ${book.Año}</p>`;
+              if (book.imagen && book._id) {
+                const img = document.createElement('img');
+                img.src = `/image/${book._id}`;
+                listItem.appendChild(img);
+              }
               bookList.appendChild(listItem);
             });
           })

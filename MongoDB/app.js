@@ -1,5 +1,7 @@
 const express = require('express');
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
+const Book = require('./Book'); // Asegúrate de que la ruta sea correcta
+const { MongoClient, ObjectId } = require('mongodb');
 const path = require('path');
 const bodyParser = require('body-parser');
 
@@ -16,6 +18,7 @@ const COLLECTION_NAME = 'books'; // Cambia por el nombre de tu colección
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
+
 // Ruta para obtener los datos de la base de datos
 app.get('/books', async (req, res) => {
   try {
@@ -31,6 +34,21 @@ app.get('/books', async (req, res) => {
   } catch (error) {
     console.error('Error al conectar con MongoDB:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
+// Ruta para obtener una imagen por ID
+app.get('/image/:id', async (req, res) => {
+  try {
+    const book = await Book.findById(req.params.id);
+    if (!book || !book.imagen.data) {
+      res.status(404).send('No image found');
+    } else {
+      res.set('Content-Type', book.imagen.contentType);
+      res.send(book.imagen.data);
+    }
+  } catch (error) {
+    res.status(500).send('Server error');
   }
 });
 
