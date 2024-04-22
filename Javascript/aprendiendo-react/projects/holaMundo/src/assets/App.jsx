@@ -9,23 +9,23 @@ export function App () {
         <section className='App'>
             <TwitterFollowCard 
             formattedUserName = {formattedUserName}
-            userName="yamiddev" 
+            userName="yamid-dev" 
             name="Yamid Horacio Rodríguez"/>
 
             <TwitterFollowCard
             formattedUserName = {formattedUserName} 
             userName="midudev" 
-            name="Mauricio Rozo" />
+            name="Miguel Ángel Durán García" />
 
             <TwitterFollowCard
             formattedUserName = {formattedUserName}
-            userName="christian" 
-            name="Christian Martinez"/>
+            userName="mouredev" 
+            name="Brais Moure"/>
 
             <TwitterFollowCard
             formattedUserName = {formattedUserName} 
-            userName="valexd" 
-            name="Valentina Velandia"/>
+            userName="MariaDev" 
+            name="Maria Dev"/>
         </section>
     )
 }
