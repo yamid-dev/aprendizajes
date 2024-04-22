@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 // import './index.css'
 
+//Esto es una función normal que devuelve o retorna un botón, pero react utiliza componentes
 function createButton({texto}){
   return(
     <button>
