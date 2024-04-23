@@ -2,35 +2,26 @@ import React from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFolloCard'
 export function App () {
-
-    /*Children
-        <TwitterFollowCard userName="yamid-dev">
-            <h3>Yamid Horacio Rodríguez</h3> <--- children
-        </TwitterFollowCard>
-    */
-    const yamiddev = {isFollowing : true, userName : 'yamid-dev'}
-    const midudev = {isFollowing : true, userName : 'midudev'}
-    const mouredev = {isFollowing : true, userName : 'mouredev'}
-    const mariadev = {isFollowing : true, userName : 'soyDalto'}
     return(
         <section className='App'>
             <React.Fragment>
-                <TwitterFollowCard {...yamiddev}>
-                    <h3>Yamid Horacio Rodríguez</h3>
+                <TwitterFollowCard userName="yamid-dev">
+                    <strong>Yamid Horacio Rodríguez</strong>
                 </TwitterFollowCard>
 
-                <TwitterFollowCard  {...midudev}>
-                    <h3>Miguel Ángel Durán García</h3>
+                <TwitterFollowCard 
+                userName="midudev">
+                    <strong>Miguel Ángel Durán García</strong>
                 </TwitterFollowCard>
 
                 <TwitterFollowCard
-                {...mouredev}>
+                userName="mouredev">
                     <strong>Brais Moure</strong>
                 </TwitterFollowCard>
 
                 <TwitterFollowCard      
-                {...mariadev}>
-                    <strong>Maria Palomino</strong>
+                userName="SoyDalto">
+                    <strong>Lucas Dalto </strong>
                 </TwitterFollowCard>
                 
             </React.Fragment>     
