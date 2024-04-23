@@ -12,7 +12,7 @@ export function App () {
         {
             userName: 'midudev',
             name: 'Miguel Ángel Durán',
-            isFollowing: true
+            isFollowing: false
         },
         {   
             userName: 'mouredev',
@@ -22,25 +22,23 @@ export function App () {
         {   
             userName: 'SoyDalto',
             name: 'Lucas Dalto',
-            isFollowing: true
+            isFollowing: false
         }
     ]
 
     return(
         <section className='App'>
             {
-                users.map(user =>{
-                    const {userName,name,isFollowing} = user
-                    return(
+                users.map(({userName,name,isFollowing})=>(
                         <React.Fragment>
                             <TwitterFollowCard 
+                            key={userName}
                             userName={userName}
                             initialIsFollowing = {isFollowing}>
                                 {name}
                             </TwitterFollowCard>
                         </React.Fragment>
-                    )
-                })
+                    ))
             }    
         </section>
     )
