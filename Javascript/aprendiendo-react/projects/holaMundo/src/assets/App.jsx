@@ -2,16 +2,46 @@ import React from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFolloCard'
 export function App () {
-    // initialIsFollowing sólo se inicializa una vez
+    
+    const users= [
+        {
+            userName: 'yamid-dev',
+            name: 'Yamid Horacio Rodríguez',
+            isFollowing: true
+        },
+        {
+            userName: 'midudev',
+            name: 'Miguel Ángel Durán',
+            isFollowing: true
+        },
+        {   
+            userName: 'mouredev',
+            name: 'Brais Moure',
+            isFollowing: true
+        },
+        {   
+            userName: 'SoyDalto',
+            name: 'Lucas Dalto',
+            isFollowing: true
+        }
+    ]
+
     return(
         <section className='App'>
-            <React.Fragment>
-                <TwitterFollowCard 
-                initialIsFollowing = {true} 
-                userName="yamid-dev">
-                    <strong>Yamid Horacio Rodríguez</strong>
-                </TwitterFollowCard>     
-            </React.Fragment>     
+            {
+                users.map(user =>{
+                    const {userName,name,isFollowing} = user
+                    return(
+                        <React.Fragment>
+                            <TwitterFollowCard 
+                            userName={userName}
+                            initialIsFollowing = {isFollowing}>
+                                {name}
+                            </TwitterFollowCard>
+                        </React.Fragment>
+                    )
+                })
+            }    
         </section>
     )
 }
