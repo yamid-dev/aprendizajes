@@ -1,5 +1,18 @@
-export function TwitterFollowCard ({children,userName}){
-    //Todos estos son elementos que retornamos desde los componentes a react, para que el los renderice
+//'Utilidad' o Hooks
+import { useState } from "react";
+
+export function TwitterFollowCard 
+({children,userName}){
+    const [isFollowing,setIsFollowing] = useState(false) 
+    
+    const text = isFollowing ? 'Siguiendo' : 'Seguir'
+    const buttonClassName = isFollowing? 'tw-followCard-button is-following' : 
+    'tw-followCard-button';
+    
+    const handleClick = () => {
+        setIsFollowing(!isFollowing)
+    }
+
     return(
         <article className='tw-followCard'>
             <header className='tw-followCard-header'>
@@ -10,8 +23,8 @@ export function TwitterFollowCard ({children,userName}){
                 </div>
             </header>
             < aside>
-                <button className='tw-followCard-button'>
-                    Seguir
+                <button className={buttonClassName} onClick={handleClick}>
+                    {text}
                 </button>
             </aside>
         </article>

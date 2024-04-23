@@ -36,9 +36,16 @@
     padding: 6px 16px;
     font-weight: bold;
     cursor: pointer;
+    border: 1px solid black;
+    transition: .3s ease background-color;
 }
 .tw-followCard .tw-followCard-button:hover{
     background: #089fb9;
-    transition: .3s ease background-color;
     color: white;
+}
+.tw-followCard-button.is-following {
+    border: 1px solid red;
+}
+.tw-followCard-button.is-following:hover{
+    background: red;
 }
