@@ -64,3 +64,18 @@
 .tw-followCard-stopFollow{
     display:none;
 }
+.p-timer{
+    color: white;
+}
+.counter{
+    color: white;
+}
+.f-basic{
+    margin-bottom: 2%;
+}
+.mb-3{
+    color: white;
+}
+.mb-3 .text-muted{
+    color: white !important;
+}

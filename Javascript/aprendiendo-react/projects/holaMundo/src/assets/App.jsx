@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFolloCard'
+import { FormBasic } from './FormBasic'
 export function App () {
     
     const users= [
@@ -23,12 +24,18 @@ export function App () {
             userName: 'SoyDalto',
             name: 'Lucas Dalto',
             isFollowing: false
+        },
+        {   
+            userName: 'Maria',
+            name: 'Maria Pastrana',
+            isFollowing: true
         }
     ]
 
-    return(
+    return(  
         <section className='App'>
-            {
+            <FormBasic></FormBasic>
+            {   
                 users.map(({userName,name,isFollowing})=>(
                         <React.Fragment>
                             <TwitterFollowCard 
@@ -39,7 +46,8 @@ export function App () {
                             </TwitterFollowCard>
                         </React.Fragment>
                     ))
-            }    
+            }
+            
         </section>
     )
 }

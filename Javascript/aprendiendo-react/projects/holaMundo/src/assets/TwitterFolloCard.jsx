@@ -12,7 +12,7 @@ export function TwitterFollowCard
     const handleClick = () => {
         setIsFollowing(!isFollowing)
     }
-
+    
     return(
         <article className='tw-followCard'>
             <header className='tw-followCard-header'>
