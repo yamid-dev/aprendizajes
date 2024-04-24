@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFolloCard'
-import { FormBasic } from './FormBasic'
+import { UncontrolledExample } from './Carrusel'
+
 export function App () {
     
     const users= [
@@ -34,7 +35,7 @@ export function App () {
 
     return(  
         <section className='App'>
-            <FormBasic></FormBasic>
+            <UncontrolledExample></UncontrolledExample>
             {   
                 users.map(({userName,name,isFollowing})=>(
                         <React.Fragment>
